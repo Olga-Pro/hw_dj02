@@ -1,0 +1,17 @@
+body {
+    background-color: #f8f9fa; /* Светлый фоновый цвет */
+}
+
+.navbar-custom {
+    background-color: #007bff; /* Синий цвет для навигационной панели */
+}
+
+.navbar-custom .navbar-brand, .navbar-custom .nav-link {
+    color: #fff; /* Белый цвет текста в навигационной панели */
+}
+
+.footer-custom {
+    background-color: #343a40; /* Темный цвет для подвала */
+    color: #fff; /* Белый цвет текста в подвале */
+}
+

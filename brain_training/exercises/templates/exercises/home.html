@@ -1,15 +1,46 @@
- <!DOCTYPE html>
-    <html>
-    <head>
-        <title>Brain Training Exercises</title>
-    </head>
-    <body>
-        <h1>Welcome to Brain Training Exercises</h1>
-        <ul>
-            <li><a href="{% url 'memory' %}">Memory Exercises</a></li>
-            <li><a href="{% url 'attention' %}">Attention Exercises</a></li>
-            <li><a href="{% url 'problem_solving' %}">Problem Solving Exercises</a></li>
-            <li><a href="{% url 'creativity' %}">Creativity Exercises</a></li>
-        </ul>
-    </body>
-    </html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain Training Exercises</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Собственные стили -->
+    {% load static %}
+    <link href="{% static 'exercises/css/styles.css' %}" rel="stylesheet">
+</head>
+<body>
+    <!-- Вертикальная навигационная панель -->
+    <nav class="navbar navbar-light vertical-nav">
+        <div>
+            <a class="navbar-brand" href="#">
+                <img src="{% static 'exercises/images/logo_Olga_brain2.png' %}" alt="Brain Training Logo" width="120" height="120" class="d-inline-block align-top">
+                Brain Training
+            </a>
+            <div class="navbar-nav">
+                {% include 'exercises/includes/menu.html' %}
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1 class="text-center text-primary">Добро пожаловать на тренировку для мозга</h1> <!-- Синий цвет заголовка -->
+
+        <!-- Основное содержание -->
+        <div class="my-4">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+ <!-- Подвал -->
+    <footer class="footer-custom text-center text-lg-start mt-4">
+        {% include 'exercises/includes/footer.html' %}
+    </footer>
+
+    <!-- Bootstrap JS и зависимости -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
