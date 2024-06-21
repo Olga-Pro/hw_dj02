@@ -1,11 +1,14 @@
- <!DOCTYPE html>
-    <html>
-    <head>
-        <title>Creativity Exercises</title>
-    </head>
-    <body>
-        <h1>Creativity Exercises</h1>
-        <p>Here you can find various exercises to improve your creativity.</p>
-        <a href="{% url 'home' %}">Back to Home</a>
-    </body>
-    </html>
+{% extends "exercises/layoute.html" %}
+    {% block title %}
+    Творчество
+    {% endblock %}
+
+    {% block header %}
+    Упражнения для развития творческих способностей
+    {% endblock %}
+
+    {% block content %}
+    <p class="lead">
+    Здесь будут упражнения
+    </p>
+    {% endblock %}

@@ -1,17 +1,50 @@
-body {
-    background-color: #f8f9fa; /* Светлый фоновый цвет */
-}
+ /* Основные стили для всего документа */
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
 
-.navbar-custom {
-    background-color: #007bff; /* Синий цвет для навигационной панели */
-}
+        /* Контейнер Flexbox для всего содержимого страницы */
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
 
-.navbar-custom .navbar-brand, .navbar-custom .nav-link {
-    color: #fff; /* Белый цвет текста в навигационной панели */
-}
+        /* Основное содержимое должно занимать оставшееся пространство */
+        .main-content {
+            flex: 1;
+        }
 
-.footer-custom {
-    background-color: #343a40; /* Темный цвет для подвала */
-    color: #fff; /* Белый цвет текста в подвале */
-}
 
+ /* Стили для боковой панели */
+        .sidebar {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #f8f9fa;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #333;
+            display: block;
+        }
+        .sidebar a:hover {
+            color: #007bff;
+        }
+        .main-content {
+            margin-left: 250px; /* Отступ для основного содержимого */
+        }
+        .footer-custom {
+            margin-left: 250px; /* Отступ для подвала */
+        }
+  .circle {
+      border-radius: 50%;
+    }
